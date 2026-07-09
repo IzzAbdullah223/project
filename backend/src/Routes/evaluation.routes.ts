@@ -2,8 +2,8 @@ import { Router } from 'express';
 import { apiKeyAuth } from '../middleware/apiKeyAuth.js';
 import { evaluateHandler } from '../controllers/evaluationController.js';
 
-const router = Router();
+export const evaluationRouter = Router();
 
-router.post('/evaluate', apiKeyAuth, evaluateHandler);
+evaluationRouter.post('/evaluate', apiKeyAuth, evaluateHandler);
 
-export default router;
+ 
